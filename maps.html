@@ -4,19 +4,60 @@
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-      }
-    </style>
+    <link type="text/css" rel="stylesheet" media="screen" href="https://www.icelandtravel.is/generated_files/pub_module/css_bundle/cb994.css" />
   </head>
   <body>
-    <div id="map"></div>
+    <div class="destination-guide-map-container">
+
+
+<div id="map" class="destiantion-guide-map"></div>
+
+
+<div id="checkboxes">
+    <div id="escorted">
+    <p class="dg-checkbox-title">Escorted tours</p>
+    <ul>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer0" onClick="toggleLayer(0)" /><label for="layer0">Reykjavik Christmas Special</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer6" onClick="toggleLayer(6)" /><label for="layer6">Iceland Complete - Classic Circle Tour</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer7" onClick="toggleLayer(7)" /><label for="layer7">Across the Wilderness</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer8" onClick="toggleLayer(8)" /><label for="layer8">Volcanoes and Glaciers</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer9" onClick="toggleLayer(9)" /><label for="layer9">Mountains and Fjords</label></div></li>
+      </ul>
+    </div>
+
+    <div id="self-drive">
+     <p class="dg-checkbox-title">Self Drive tours</p>
+     <ul>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer1" onClick="toggleLayer(1)" /><label for="layer1">Ring Road Highlights</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer2" onClick="toggleLayer(2)" /><label for="layer2">Iceland Odyssey</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer3" onClick="toggleLayer(3)" /><label for="layer3">Golden Circle Self Drive</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer4" onClick="toggleLayer(4)" /><label for="layer4">Spectacular West</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer5" onClick="toggleLayer(5)" /><label for="layer5">Young Explorers</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer11" onClick="toggleLayer(11)" /><label for="layer11">Majestic Fjords</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer12" onClick="toggleLayer(12)" /><label for="layer12">Highlands and Lowlands</label></div></li>
+      <li><div class="dg-map-checkbox"><input type="checkbox" id="layer13" onClick="toggleLayer(13)" /><label for="layer13">Winter Wonders & Delicious Detours</label></div></li>
+      </ul>
+    </div>
+
+    <div id="short-breaks">
+        <p class="dg-checkbox-title">Short breaks</p>
+        <ul>
+          <li><div class="dg-map-checkbox"><input type="checkbox" id="layer10" onClick="toggleLayer(10)" /><label for="layer10">Game of Thrones</label></div></li>
+      </ul>
+    </div>
+
+    <div id="dg-markers">
+    <p class="dg-checkbox-title">Destination guide</p>
+    <ul>
+      <li><div id="towns-checkbox" class="dg-map-checkbox"><input onClick="show('towns')" id="townsbox" type="checkbox"><label for="townsbox">Towns and Villages</label></div></li>
+      <li><div id="attractions-checkbox" class="dg-map-checkbox"><input onClick="show('attractions')" id="attractionsbox" type="checkbox"><label for="attractionsbox">Major Attractions</label></div></li>
+      <li><div id="museums-checkbox" class="dg-map-checkbox"><input onClick="show('museums')" id="museumsbox" type="checkbox"><label for="museumsbox">Museums</label></div></li>
+      </ul>
+    </div>
+
+</div>
+</div>
+
     <script>
       var map;
       function initMap() {
